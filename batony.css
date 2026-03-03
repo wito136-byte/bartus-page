@@ -1,0 +1,361 @@
+/* =========================
+   HERO
+========================= */
+
+.protein-hero{
+position:relative;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px 8%;
+min-height:85vh;
+gap:60px;
+overflow:hidden;
+background:#ffffff;
+transition:0.4s ease;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.protein-left{
+max-width:520px;
+z-index:2;
+}
+
+.protein-left h1{
+font-size:58px;
+font-weight:800;
+margin-bottom:25px;
+letter-spacing:-1px;
+}
+
+.protein-desc{
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+color:#444;
+}
+
+.protein-spec{
+font-weight:700;
+font-size:18px;
+margin-bottom:15px;
+}
+
+.protein-price{
+font-size:22px;
+font-weight:700;
+margin-bottom:30px;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.protein-right{
+position:relative;
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:2;
+}
+
+.protein-bar{
+    height:320px;
+    width:auto;
+    max-width:unset;
+    animation:float 6s ease-in-out infinite;
+    filter:drop-shadow(0 60px 90px rgba(0,0,0,0.25));
+}
+
+@keyframes float{
+0%{ transform:translateY(0px); }
+50%{ transform:translateY(-8px); }
+100%{ transform:translateY(0px); }
+}
+
+/* =========================
+   FLAVOR SWITCH
+========================= */
+
+.flavor-switch{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+.flavor-btn{
+padding:10px 18px;
+border-radius:40px;
+border:1px solid #ddd;
+background:white;
+cursor:pointer;
+font-weight:600;
+font-size:14px;
+transition:0.25s ease;
+}
+
+.flavor-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.flavor-btn.active{
+border:2px solid #111;
+}
+
+/* =========================
+   CONTENT SECTIONS
+========================= */
+
+.protein-section{
+padding:110px 20px;
+text-align:center;
+background:#ffffff;
+}
+
+.protein-section:nth-child(even){
+background:#f5f5f7;
+}
+
+.protein-section h2{
+font-size:36px;
+margin-bottom:40px;
+font-weight:800;
+}
+
+.protein-section p{
+max-width:800px;
+margin:0 auto 25px;
+line-height:1.8;
+color:#555;
+font-size:17px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.nutrition-table{
+max-width:600px;
+margin:40px auto;
+border-collapse:collapse;
+width:100%;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,0.06);
+}
+
+.nutrition-table td{
+padding:16px;
+border-bottom:1px solid #eee;
+font-size:15px;
+}
+
+.nutrition-table td:last-child{
+text-align:right;
+font-weight:600;
+}
+
+/* =========================
+   FADE
+========================= */
+
+.fade{
+opacity:0;
+transform:translateY(20px);
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+transition:0.4s ease;
+}
+
+.protein-left h1,
+.protein-desc{
+transition: opacity 0.25s ease;
+}
+/* =========================
+   COMPACT SPECS SECTION
+========================= */
+
+.protein-specs-compact{
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap:40px;
+padding:80px 8%;
+background:#f5f5f7;
+}
+
+.spec-card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.05);
+}
+
+.spec-card h3{
+font-size:20px;
+font-weight:700;
+margin-bottom:18px;
+letter-spacing:-0.3px;
+}
+
+.spec-card p{
+font-size:15px;
+line-height:1.7;
+color:#555;
+}
+
+.nutrition-card{
+display:flex;
+flex-direction:column;
+}
+
+.nutrition-table.compact{
+margin:0;
+box-shadow:none;
+border-radius:0;
+}
+
+.nutrition-table.compact td{
+padding:10px 0;
+border-bottom:1px solid #eee;
+font-size:14px;
+}
+
+.nutrition-table.compact td:last-child{
+text-align:right;
+font-weight:600;
+}
+.protein-bar,
+.protein-left h1,
+.protein-desc{
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.switching{
+    opacity:0;
+    transform:scale(0.96) translateY(6px);
+}
+
+/* =========================
+   PROTEIN POWER METER
+========================= */
+
+.protein-meter{
+padding:100px 8%;
+background:#f5f5f7;
+text-align:center;
+}
+
+.meter-container{
+max-width:900px;
+margin:0 auto;
+}
+
+.protein-meter h2{
+font-size:42px;
+font-weight:800;
+margin-bottom:20px;
+letter-spacing:-1px;
+}
+
+.meter-sub{
+color:#555;
+margin-bottom:50px;
+font-size:17px;
+}
+
+.meter-input{
+margin-bottom:60px;
+}
+
+.meter-input label{
+display:block;
+font-weight:600;
+margin-bottom:20px;
+}
+
+#weightRange{
+width:100%;
+appearance:none;
+height:6px;
+background:#ddd;
+border-radius:10px;
+outline:none;
+}
+
+#weightRange::-webkit-slider-thumb{
+appearance:none;
+width:22px;
+height:22px;
+border-radius:50%;
+background:#111;
+cursor:pointer;
+}
+
+.weight-display{
+margin-top:20px;
+font-size:22px;
+font-weight:700;
+}
+
+.meter-results{
+display:flex;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.meter-box{
+background:white;
+padding:40px 60px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.05);
+min-width:260px;
+transition:0.3s ease;
+}
+
+.meter-box:hover{
+transform:translateY(-6px);
+}
+
+.meter-title{
+font-size:14px;
+letter-spacing:1px;
+text-transform:uppercase;
+color:#777;
+margin-bottom:15px;
+}
+
+.meter-value{
+font-size:38px;
+font-weight:800;
+}
+
+.meter-value.highlight{
+color:#111;
+}
+
+.meter-note{
+margin-top:40px;
+font-size:14px;
+color:#888;
+}
+.meter-disclaimer{
+max-width:800px;
+margin:50px auto 0;
+font-size:14px;
+line-height:1.7;
+color:#777;
+background:rgba(0,0,0,0.03);
+padding:25px 30px;
+border-radius:16px;
+}

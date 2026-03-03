@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BARTUŚ PROTEIN+</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="batony.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="nav-container">
+<div class="logo">BARTUŚ</div>
+<nav class="menu">
+<a href="index.html">Strona główna</a>
+<a href="kalkulator.html">Kalkulator</a>
+<a href="koszyk.html">Koszyk</a>
+</nav>
+</div>
+</header>
+
+
+<section class="protein-hero" id="heroSection">
+
+<div class="protein-left">
+
+<h1 id="flavor-title">Coconut Dark</h1>
+
+<p class="protein-desc" id="flavor-desc">
+Gorzka czekolada przełamana nutą kokosa.
+42 g białka na 100 g produktu to realne wsparcie regeneracji.
+Smak, który nie udaje deseru — tylko działa.
+</p>
+
+<div class="protein-spec">
+42 g białka / 100 g
+</div>
+
+<div class="protein-price">
+7,99 zł / baton 100 g
+</div>
+
+<div class="flavor-switch">
+<button class="flavor-btn" data-flavor="coconut">Coconut Dark</button>
+<button class="flavor-btn" data-flavor="peanut">Peanut Power</button>
+<button class="flavor-btn" data-flavor="dark">Dark Salt</button>
+</div>
+
+</div>
+
+<div class="protein-right">
+
+<div class="protein-shadow"></div>
+
+<img src="coconut.png" id="proteinImage" class="protein-bar">
+
+</div>
+
+</section>
+
+
+<section class="protein-section">
+
+<h2>Dlaczego 42 g białka?</h2>
+
+<p>
+BARTUŚ PROTEIN+ to baton zaprojektowany z myślą o osobach trenujących siłowo,
+sportowcach oraz osobach budujących masę mięśniową.
+Wysoka zawartość białka wspiera regenerację i utrzymanie masy mięśniowej.
+</p>
+
+<p>
+To nie słodycz. To funkcjonalny element planu treningowego.
+</p>
+
+</section>
+<section class="protein-meter">
+
+<div class="meter-container">
+
+<h2>Protein Power Meter</h2>
+<p class="meter-sub">
+Sprawdź ile białka potrzebujesz dziennie i ile batonów BARTUŚ PROTEIN+ to pokryje.
+</p>
+
+<div class="meter-input">
+
+<label>Twoja masa ciała (kg)</label>
+<input type="range" min="50" max="120" value="80" id="weightRange">
+<div class="weight-display">
+<span id="weightValue">80</span> kg
+</div>
+
+</div>
+
+<div class="meter-results">
+
+<div class="meter-box">
+<div class="meter-title">Dzienne zapotrzebowanie</div>
+<div class="meter-value" id="proteinNeed">160 g</div>
+</div>
+
+<div class="meter-box">
+<div class="meter-title">Ile batonów?</div>
+<div class="meter-value highlight" id="barNeed">4 szt.</div>
+</div>
+
+</div>
+
+<p class="meter-note">
+Przyjęto 2 g białka / kg masy ciała.
+</p>
+
+</div>
+
+<div class="meter-disclaimer">
+Obliczenia mają charakter orientacyjny. Rzeczywiste zapotrzebowanie na białko zależy od poziomu aktywności, celu treningowego oraz ogólnego stylu życia. 
+BARTUŚ PROTEIN+ może stanowić element zbilansowanej diety, jednak nie zastępuje pełnowartościowych posiłków ani zdrowych nawyków żywieniowych.
+</div>
+
+</section>
+
+<section class="protein-specs-compact">
+
+<div class="spec-card">
+
+<h3>Pełna linia smaków. Jeden standard jakości.</h3>
+
+<p>
+BARTUŚ PROTEIN+ to trzy dopracowane warianty smakowe stworzone dla osób aktywnych, 
+które oczekują czegoś więcej niż zwykłej przekąski. Każdy baton zawiera 42 g białka 
+w 100 g produktu, oferując realne wsparcie regeneracji i budowania formy — bez kompromisów w smaku.
+</p>
+
+</div>
+
+<div class="spec-card">
+
+<h3>Skład</h3>
+
+<p>
+Izolat białka serwatkowego (WPI), koncentrat białka mleka,
+masło kakaowe, kakao, aromaty naturalne,
+substancje słodzące (maltitol, sukraloza),
+orzechy arachidowe (Peanut Power),
+wiórki kokosowe (Coconut Dark).
+</p>
+
+</div>
+
+<div class="spec-card nutrition-card">
+
+<h3>Wartości odżywcze (100 g)</h3>
+
+<table class="nutrition-table compact">
+<tr><td>Białko</td><td>42 g</td></tr>
+<tr><td>Energia</td><td>420 kcal</td></tr>
+<tr><td>Tłuszcz</td><td>18 g</td></tr>
+<tr><td>Węglowodany</td><td>28 g</td></tr>
+<tr><td>Cukry</td><td>3 g</td></tr>
+<tr><td>Błonnik</td><td>6 g</td></tr>
+<tr><td>Sól</td><td>0,4 g</td></tr>
+</table>
+
+</div>
+
+</section>
+
+<footer class="footer">
+<p>© 2026 BARTUŚ</p>
+</footer>
+
+<script src="batony.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Koszyk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="nav-container">
+<div class="logo">BARTUŚ</div>
+<a href="index.html">← Powrót do sklepu</a>
+</div>
+</header>
+
+<div class="container">
+
+<h1>Twój koszyk</h1>
+
+<div class="checkout-layout">
+
+<div class="checkout-left">
+
+<div class="checkout-box">
+<h2>Produkty</h2>
+<div id="cart-items"></div>
+</div>
+
+<div class="checkout-box">
+<h2>Dane dostawy</h2>
+
+<input class="input" type="text" placeholder="Imię i nazwisko">
+<input class="input" type="text" placeholder="Adres">
+<input class="input" type="text" placeholder="Kod pocztowy">
+<input class="input" type="text" placeholder="Miasto">
+
+<h3>Metoda płatności</h3>
+
+<label><input type="radio" name="pay"> BLIK</label><br>
+<label><input type="radio" name="pay"> Przelew</label><br>
+<label><input type="radio" name="pay"> Karta</label>
+
+</div>
+
+</div>
+
+
+<div class="checkout-right">
+
+<div class="checkout-box">
+<h2>Podsumowanie</h2>
+<p id="total-price"></p>
+
+<button class="buy-button" onclick="order()">
+Złóż zamówienie
+</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function loadCart(){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let itemsDiv = document.getElementById("cart-items");
+    let total = 0;
+
+    itemsDiv.innerHTML = "";
+
+    cart.forEach(item => {
+
+        let div = document.createElement("div");
+        div.className = "cart-item";
+        div.textContent = item.name + " - " + item.price + " zł";
+
+        itemsDiv.appendChild(div);
+        total += item.price;
+    });
+
+    document.getElementById("total-price").textContent =
+        "Suma: " + total.toFixed(2) + " zł";
+}
+
+function order(){
+    alert("Zamówienie przyjęte (symulacja)");
+    localStorage.removeItem("cart");
+    location.reload();
+}
+
+loadCart();
+
+</script>
+
+</body>
+</html>

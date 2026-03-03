@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator odpowiedzialnych decyzji</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="cart.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="nav-container">
+<div class="logo">BARTUŚ</div>
+
+<nav class="menu">
+<a href="index.html">Strona główna</a>
+<a href="kalkulator.html">Kalkulator</a>
+<a href="koszyk.html">Koszyk (<span id="cart-count">0</span>)</a>
+</nav>
+</div>
+</header>
+
+<section class="calculator-section">
+
+<div class="calculator-grid">
+
+<!-- LEWA STRONA -->
+<div class="left-panel">
+
+<h1>Kalkulator odpowiedzialnych decyzji</h1>
+
+<div class="vs-box">
+<img src="kondomy.png">
+<div class="vs">VS</div>
+<img src="dziecko.png">
+</div>
+
+<p>Ile razy w miesiącu planujesz stosować zabezpieczenie?</p>
+
+<input type="range" min="1" max="20" value="4" id="razy"
+oninput="updateSlider(this.value)">
+
+<p><strong id="sliderValue">4</strong> razy miesięcznie</p>
+
+<p>Cena opakowania: <strong>24,99 zł (12 szt.)</strong></p>
+
+<div class="explain">
+<h3>Jak to liczymy?</h3>
+<p>
+Jedno opakowanie zawiera 12 sztuk.  
+Koszt jednego zabezpieczenia to ok. <strong>2,08 zł</strong>.
+</p>
+
+<ul>
+<li id="miesiecznyKoszt"></li>
+<li id="rocznyKoszt"></li>
+<li id="lat18Koszt"></li>
+</ul>
+</div>
+
+<label class="check">
+<input type="checkbox" id="plus" onchange="policz()">
+Uwzględnij świadczenie 800+
+</label>
+
+
+</div>
+
+<!-- PRAWA STRONA -->
+<div class="right-panel">
+
+<h2 id="dzieckoLabel">
+Szacowany koszt dziecka do ukończenia 18 roku życia:
+</h2>
+
+<h2 id="dzieckoKoszt">380000 zł</h2>
+
+<small>
+Na podstawie raportu Centrum im. Adama Smitha
+</small>
+
+<div class="apple-input">
+<input type="number" id="wyplata" oninput="policz()" required>
+<label>Twoja miesięczna wypłata netto</label>
+</div>
+<h1 class="save" id="oszczedzasz"></h1>
+<h2 id="praca"></h2>
+
+<div class="things-section">
+
+<h2 class="losuj-title">
+Za tę kwotę możesz mieć:
+</h2>
+
+<div class="cards-container" id="rzeczyLista"></div>
+
+</div>
+
+<a href="kondomy.html" class="buy-button">
+Podejmij świadomą decyzję
+</a>
+
+</div>
+
+</div>
+
+</section>
+<p class="disclaimer">
+Obliczenia mają charakter szacunkowy.
+</p>
+
+</div>
+
+</section>
+
+<script>
+
+let rzeczy = [
+
+["Używany samochód", 25000],
+["Nowy iPhone", 5000],
+["Wakacje all-inclusive", 4000],
+["Netflix (rok)", 600],
+["PlayStation 5", 2500],
+["Rower", 1500],
+["Laptop", 4000],
+["Kebab", 20],
+["Pizza", 40],
+["Wkład własny do mieszkania", 100000]
+
+];
+
+function updateSlider(val){
+document.getElementById("sliderValue").innerText = val;
+policz();
+}
+
+function policz(){
+
+let razy = document.getElementById("razy").value;
+let kosztJednego = 24.99/12;
+
+let mies = razy * kosztJednego;
+let rocznie = mies * 12;
+let lat18 = rocznie * 18;
+
+let dziecko = 380000;
+
+if(document.getElementById("plus").checked){
+dziecko -= 800 * 12 * 18;
+document.getElementById("dzieckoLabel").innerText =
+"Szacowany koszt dziecka po uwzględnieniu 800+:";
+}else{
+dziecko = 380000;
+document.getElementById("dzieckoLabel").innerText =
+"Szacowany koszt dziecka do ukończenia 18 roku życia:";
+}
+
+let oszczednosc = dziecko - lat18;
+
+document.getElementById("miesiecznyKoszt").innerText =
+"Koszt miesięczny: " + mies.toFixed(2) + " zł";
+
+document.getElementById("rocznyKoszt").innerText =
+"Koszt roczny: " + rocznie.toFixed(2) + " zł";
+
+document.getElementById("lat18Koszt").innerText =
+"Koszt przez 18 lat: " + lat18.toFixed(2) + " zł";
+
+document.getElementById("oszczedzasz").innerText =
+"Oszczędzasz: " + oszczednosc.toFixed(0) + " zł";
+
+document.getElementById("dzieckoKoszt").innerText =
+dziecko.toFixed(0) + " zł";
+
+let wyplata = document.getElementById("wyplata").value;
+
+if(wyplata > 0){
+let miesPracy = oszczednosc / wyplata;
+let lata = miesPracy/12;
+
+document.getElementById("praca").innerText =
+"To równowartość ok. " + miesPracy.toFixed(0) +
+" miesięcy pracy (" + lata.toFixed(1) + " lat)";
+}
+
+}
+
+function losuj(){
+
+let lista = document.getElementById("losowe");
+lista.innerHTML = "";
+
+let oszcz = document.getElementById("oszczedzasz").innerText;
+let kwota = parseInt(oszcz.replace(/\D/g,''));
+
+for(let i=0;i<3;i++){
+
+let rand = Math.floor(Math.random()*rzeczy.length);
+let nazwa = rzeczy[rand][0];
+let cena = rzeczy[rand][1];
+
+let ile = Math.floor(kwota/cena);
+
+let li = document.createElement("li");
+li.innerText = ile + " × " + nazwa;
+lista.appendChild(li);
+
+}
+
+}
+
+policz();
+
+</script>
+<script src="kalkulator.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", policz);
+</script>
+</body>
+</html>

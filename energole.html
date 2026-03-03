@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bartuś Energy 500 ml</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="energole.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="nav-container">
+<div class="logo">BARTUŚ</div>
+<nav class="menu">
+<a href="index.html">Strona główna</a>
+<a href="kalkulator.html">Kalkulator</a>
+<a href="koszyk.html">Koszyk</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="energy-hero">
+
+<div class="energy-left">
+
+<h1 id="flavor-title">Night Mode</h1>
+
+<p class="energy-desc" id="flavor-desc">
+Głęboki, wytrawny profil smakowy stworzony do działania po zmroku.
+300 mg kofeiny zapewnia maksymalną koncentrację wtedy, gdy inni już zwalniają.
+Zero cukru. Zero kompromisów.
+</p>
+
+<div class="energy-specs">
+300 mg kofeiny • Zero cukru • 500 ml
+</div>
+
+<div class="energy-price">
+6,99 zł / puszka
+</div>
+
+<div class="flavor-switch">
+<button class="flavor-btn active" data-flavor="black">Night Mode</button>
+<button class="flavor-btn" data-flavor="yellow">Yellow Surge</button>
+<button class="flavor-btn" data-flavor="green">Lime Reload</button>
+<button class="flavor-btn" data-flavor="red">Crimson Rush</button>
+<button class="flavor-btn" data-flavor="violet">Violet Voltage</button>
+<button class="flavor-btn" data-flavor="pink">Pink Impact</button>
+</div>
+
+</div>
+
+<div class="energy-right">
+<div class="energy-glow" id="glow"></div>
+<img src="energole-black.png" id="canImage" class="energy-can">
+</div>
+
+</section>
+
+<!-- DLACZEGO DZIAŁA -->
+
+<section class="energy-compact">
+
+<div class="energy-features">
+
+<div class="feature-card">
+<h3>Wysoka dawka kofeiny</h3>
+<p>300 mg (Night Mode) lub 200 mg (pozostałe warianty). Stabilne, kontrolowane pobudzenie bez nagłego spadku energii.</p>
+</div>
+
+<div class="feature-card">
+<h3>Zero cukru</h3>
+<p>Brak gwałtownych skoków glukozy. Energia utrzymuje się równomiernie, bez efektu „crash”.</p>
+</div>
+
+<div class="feature-card">
+<h3>Wsparcie koncentracji</h3>
+<p>Tauryna, witaminy z grupy B oraz ekstrakty roślinne wspierają skupienie i redukcję zmęczenia.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SKŁAD + TABELA -->
+
+<section class="energy-info">
+
+<div class="energy-info-grid">
+
+<div class="energy-ingredients">
+<h2>Skład</h2>
+<p id="ingredients-text">
+Woda, dwutlenek węgla, tauryna, kofeina (300 mg / 500 ml),
+ekstrakt z żeń-szenia, witamina B6, witamina B12,
+regulator kwasowości (kwas cytrynowy),
+aromaty naturalne, substancje słodzące (sukraloza, acesulfam K).
+</p>
+</div>
+
+<div class="energy-nutrition">
+<h2>Wartości odżywcze (na 100 ml)</h2>
+
+<table class="nutrition-table">
+<tr><td>Energia</td><td>5 kcal</td></tr>
+<tr><td>Tłuszcz</td><td>0 g</td></tr>
+<tr><td>Węglowodany</td><td>0 g</td></tr>
+<tr><td>Cukry</td><td>0 g</td></tr>
+<tr><td>Białko</td><td>0 g</td></tr>
+<tr><td>Sól</td><td>0,02 g</td></tr>
+<tr><td>Kofeina</td><td>60 mg</td></tr>
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="needs">
+  <div class="needs-box">
+    <h2>Niech system zdecyduje jakiego Bartusia dzisiaj potrzebujesz</h2>
+    <button id="energyRandomBtn" class="energy-random-btn">
+      Uruchom system
+    </button>
+  </div>
+</section>
+
+<div class="energy-random-overlay" id="energyRandomOverlay">
+  <div class="energy-random-track" id="energyRandomTrack"></div>
+
+  <div class="energy-random-result" id="energyRandomResult">
+      <img id="randomWinnerImg" src="">
+      <h2 id="randomWinnerText"></h2>
+      <button id="randomConfirmBtn">Przejdź do smaku</button>
+  </div>
+</div>
+
+<!-- DLA KOGO -->
+
+
+<!-- ENERGY MODE OVERLAY -->
+
+<div class="energy-mode-overlay" id="energyModeOverlay">
+  <div class="energy-mode-box">
+    <img id="modeCan" src="" class="mode-can">
+    <h2 id="modeTitle"></h2>
+    <p id="modeSub"></p>
+  </div>
+</div>
+
+<script src="energole.js"></script>
+
+<footer class="footer">
+<p>© 2026 BARTUŚ</p>
+</footer>
+
+
+
+
+
+
+</body>
+</html>

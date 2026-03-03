@@ -1,0 +1,189 @@
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:#ffffff;
+color:#111;
+}
+
+.navbar{
+padding:20px 8%;
+border-bottom:1px solid #eee;
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-weight:800;
+font-size:22px;
+}
+
+.menu a{
+margin-left:25px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+/* HERO */
+
+.caps-hero{
+padding:100px 8%;
+background:linear-gradient(180deg,#f5f5f7,#ffffff);
+}
+
+.caps-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+}
+
+.caps-left{
+max-width:500px;
+}
+
+.caps-left h1{
+font-size:48px;
+font-weight:800;
+margin-bottom:20px;
+letter-spacing:-1px;
+}
+
+.caps-tagline{
+font-size:20px;
+color:#666;
+margin-bottom:30px;
+}
+
+.caps-price{
+font-size:36px;
+font-weight:700;
+margin-bottom:25px;
+}
+
+.caps-price span{
+display:block;
+font-size:14px;
+font-weight:400;
+color:#666;
+margin-top:6px;
+}
+
+.caps-btn{
+padding:16px 32px;
+font-size:16px;
+font-weight:600;
+border:none;
+border-radius:14px;
+background:#111;
+color:#fff;
+cursor:pointer;
+transition:0.3s ease;
+}
+
+.caps-btn:hover{
+background:#333;
+}
+
+.caps-right{
+position:relative;
+}
+
+.caps-right img{
+width:420px;
+position:relative;
+z-index:2;
+}
+
+.caps-glow{
+position:absolute;
+width:500px;
+height:500px;
+border-radius:50%;
+background:radial-gradient(circle,rgba(0,150,255,0.25),transparent 70%);
+filter:blur(80px);
+z-index:1;
+}
+
+/* FEATURES */
+
+.caps-features{
+padding:100px 8%;
+background:#f5f5f7;
+}
+
+.caps-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.caps-card{
+background:#fff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.05);
+transition:0.3s ease;
+}
+
+.caps-card:hover{
+transform:translateY(-8px);
+box-shadow:0 30px 70px rgba(0,0,0,0.1);
+}
+
+.caps-card h3{
+font-size:20px;
+margin-bottom:15px;
+}
+
+.caps-card p{
+font-size:15px;
+line-height:1.6;
+color:#555;
+}
+
+/* SPECYFIKACJA */
+
+.caps-specs{
+padding:100px 8%;
+text-align:center;
+}
+
+.caps-specs h2{
+font-size:36px;
+margin-bottom:60px;
+}
+
+.specs-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.spec-box{
+background:#f5f5f7;
+padding:30px;
+border-radius:18px;
+}
+
+.spec-box span{
+display:block;
+font-size:14px;
+color:#777;
+margin-bottom:8px;
+}
+
+.spec-box strong{
+font-size:20px;
+}
+
+.footer{
+padding:40px;
+text-align:center;
+border-top:1px solid #eee;
+margin-top:60px;
+}

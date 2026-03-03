@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BARTUŚKI – Musy Owocowe</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="musy.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="nav-container">
+<div class="logo">BARTUŚ</div>
+<nav class="menu">
+<a href="index.html">Strona główna</a>
+<a href="kalkulator.html">Kalkulator</a>
+<a href="koszyk.html">Koszyk</a>
+</nav>
+</div>
+</header>
+
+
+<section class="muse-hero" id="heroSection">
+
+<div class="muse-left">
+
+<h1 id="flavor-title">Jabłko Banan Marchew</h1>
+
+<p class="muse-desc" id="flavor-desc">
+Naturalnie słodkie połączenie owoców i warzyw.
+Idealne dla najmłodszych – bez dodatku cukru,
+100% owoców i warzyw w wygodnej formie 100 g.
+</p>
+
+<div class="muse-spec">
+100% owoców • Bez dodatku cukru • Źródło witaminy D • 100 g
+</div>
+
+<div class="muse-price">
+3,99 zł / mus 100 g
+</div>
+
+<div class="flavor-switch">
+<button class="flavor-btn active" data-flavor="mix1">Jabłko Banan Marchew</button>
+<button class="flavor-btn" data-flavor="mix2">Truskawka Jabłko</button>
+<button class="flavor-btn" data-flavor="mix3">Jabłko Kiwi</button>
+</div>
+
+</div>
+
+<div class="muse-right">
+<img src="mus1.png" id="museImage" class="muse-pack">
+</div>
+
+</section>
+
+
+<section class="muse-specs-compact">
+
+<div class="spec-card">
+
+<h3>Dla najmłodszych</h3>
+
+<p>
+Bartuśki to musy owocowe stworzone z myślą o dzieciach.
+Delikatna konsystencja, naturalny smak i skład oparty wyłącznie
+na owocach oraz warzywach – bez zbędnych dodatków.
+</p>
+
+</div>
+
+<div class="spec-card">
+
+<h3>Skład</h3>
+
+<p id="ingredients-text">
+Przecier jabłkowy, bananowy, marchewkowy,
+naturalna witamina D.
+Bez dodatku cukru. Zawiera naturalnie występujące cukry.
+</p>
+
+</div>
+
+<div class="spec-card nutrition-card">
+
+<h3>Wartości odżywcze (100 g)</h3>
+
+<table class="nutrition-table compact">
+<tr><td>Energia</td><td>52 kcal</td></tr>
+<tr><td>Tłuszcz</td><td>0,2 g</td></tr>
+<tr><td>Węglowodany</td><td>11 g</td></tr>
+<tr><td>Cukry</td><td>9 g</td></tr>
+<tr><td>Błonnik</td><td>1,5 g</td></tr>
+<tr><td>Białko</td><td>0,5 g</td></tr>
+<tr><td>Witamina D</td><td>1,5 µg</td></tr>
+</table>
+
+</div>
+
+</section>
+
+
+<section class="muse-interactive">
+
+<h2>Poznaj Bartuśki w interaktywnej formie</h2>
+
+<div class="interactive-buttons">
+<button id="openQuiz" class="interactive-btn">🧠 Sprawdź quiz</button>
+<button id="openMemory" class="interactive-btn">🍓 Zagraj w memory</button>
+</div>
+
+</section>
+
+
+<!-- MODAL -->
+
+<div class="interactive-modal" id="interactiveModal">
+<div class="interactive-box">
+
+<button class="close-modal" id="closeModal">✕</button>
+
+<div id="modalContent"></div>
+
+</div>
+</div>
+
+<footer class="footer">
+<p>© 2026 BARTUŚ</p>
+</footer>
+
+<script src="musy.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+/* =========================
+   HERO
+========================= */
+
+.muse-hero{
+position:relative;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px 8%;
+min-height:85vh;
+gap:60px;
+overflow:hidden;
+background:#ffffff;
+transition: background 0.4s ease;
+}
+
+.muse-left{
+max-width:520px;
+z-index:2;
+}
+
+.muse-left h1{
+font-size:54px;
+font-weight:800;
+margin-bottom:25px;
+transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.muse-desc{
+font-size:17px;
+line-height:1.8;
+margin-bottom:25px;
+color:#444;
+transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.muse-spec{
+font-weight:700;
+font-size:16px;
+margin-bottom:15px;
+}
+
+.muse-price{
+font-size:20px;
+font-weight:700;
+margin-bottom:25px;
+}
+
+.muse-right{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.muse-pack{
+    height:670px;
+    width:auto;
+    animation:float 6s ease-in-out infinite;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+@keyframes float{
+0%{ transform:translateY(0px); }
+50%{ transform:translateY(-8px); }
+100%{ transform:translateY(0px); }
+}
+
+/* =========================
+   FLAVOR SWITCH PREMIUM
+========================= */
+
+.flavor-switch{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:15px;
+}
+
+.flavor-btn{
+padding:10px 20px;
+border-radius:40px;
+border:1px solid #ddd;
+background:white;
+cursor:pointer;
+font-weight:600;
+font-size:14px;
+transition: all 0.25s ease;
+}
+
+.flavor-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.flavor-btn.active{
+background:#111;
+color:white;
+border:1px solid #111;
+}
+
+/* =========================
+   COMPACT SECTION
+========================= */
+
+.muse-specs-compact{
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap:40px;
+padding:80px 8%;
+background:#f5f5f7;
+}
+
+.spec-card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.05);
+}
+
+.spec-card h3{
+font-size:18px;
+margin-bottom:15px;
+}
+
+.spec-card p{
+font-size:15px;
+color:#555;
+line-height:1.7;
+}
+
+/* =========================
+   SWITCH ANIMATION
+========================= */
+
+.switching{
+opacity:0;
+transform:scale(0.96) translateY(6px);
+}
+
+/* =========================
+   INTERACTIVE SECTION
+========================= */
+
+.muse-interactive{
+padding:80px 8%;
+text-align:center;
+background:#ffffff;
+}
+
+.muse-interactive h2{
+font-size:32px;
+font-weight:800;
+margin-bottom:40px;
+}
+
+.interactive-buttons{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.interactive-btn{
+padding:16px 32px;
+border-radius:50px;
+border:none;
+font-weight:600;
+font-size:16px;
+cursor:pointer;
+background:#111;
+color:white;
+transition:all 0.25s ease;
+}
+
+.interactive-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.interactive-modal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.45);
+display:flex;
+justify-content:center;
+align-items:center;
+opacity:0;
+pointer-events:none;
+transition:0.3s ease;
+z-index:999;
+}
+
+.interactive-modal.show{
+opacity:1;
+pointer-events:auto;
+}
+
+.interactive-box{
+background:white;
+width:90%;
+max-width:800px;
+padding:50px;
+border-radius:25px;
+position:relative;
+animation:scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn{
+from{ transform:scale(0.95); opacity:0; }
+to{ transform:scale(1); opacity:1; }
+}
+
+.close-modal{
+position:absolute;
+top:20px;
+right:25px;
+border:none;
+background:none;
+font-size:22px;
+cursor:pointer;
+}
+
+/* =========================
+   MEMORY GAME PRO
+========================= */
+
+.memory-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+margin-top:40px;
+perspective:1000px;
+}
+
+.memory-card{
+height:100px;
+position:relative;
+cursor:pointer;
+}
+
+.memory-inner{
+position:absolute;
+width:100%;
+height:100%;
+transition:transform 0.5s;
+transform-style:preserve-3d;
+}
+
+.memory-card.flipped .memory-inner{
+transform:rotateY(180deg);
+}
+
+.memory-front,
+.memory-back{
+position:absolute;
+width:100%;
+height:100%;
+border-radius:18px;
+display:flex;
+justify-content:center;
+align-items:center;
+backface-visibility:hidden;
+font-size:64px;
+}
+
+.memory-front{
+background:#f5f5f7;
+}
+
+.memory-back{
+background:white;
+transform:rotateY(180deg);
+box-shadow:0 15px 30px rgba(0,0,0,0.08);
+}
+
+/* WYGRANA */
+
+.memory-win{
+margin-top:40px;
+text-align:center;
+font-size:28px;
+font-weight:700;
+color:#2ecc71;
+animation:popIn 0.6s ease;
+}
+
+@keyframes popIn{
+0%{transform:scale(0.8); opacity:0;}
+100%{transform:scale(1); opacity:1;}
+}
+
+/* ===== QUIZ FIX ===== */
+
+.quiz-container{
+text-align:center;
+}
+
+.quiz-option{
+display:block;
+width:100%;
+max-width:420px;
+margin:12px auto;
+padding:16px 22px;
+border-radius:18px;
+border:1px solid #e5e5e5;
+background:#f5f5f7;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:all 0.25s ease;
+}
+
+.quiz-option:hover{
+background:#111;
+color:#fff;
+transform:translateY(-3px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.quiz-result h1{
+font-size:64px;
+font-weight:800;
+margin:20px 0;
+}
+/* ===== WYŚRODKOWANA WYGRANA ===== */
+
+.memory-grid{
+position:relative;
+}
+
+.memory-win{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+text-align:center;
+background:rgba(255,255,255,0.95);
+padding:40px 60px;
+border-radius:20px;
+font-size:28px;
+font-weight:800;
+color:#2ecc71;
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
+animation:popIn 0.4s ease;
+z-index:10;
+}

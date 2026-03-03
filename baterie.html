@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BARTUŚ BATTERIES</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="baterie.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="nav-container">
+<div class="logo">BARTUŚ</div>
+<nav class="menu">
+<a href="index.html">Strona główna</a>
+<a href="kalkulator.html">Kalkulator</a>
+<a href="koszyk.html">Koszyk</a>
+</nav>
+</div>
+</header>
+
+<section class="battery-hero">
+
+<div class="battery-left">
+
+<h1 id="battery-title">Bartuś Basic</h1>
+
+<p class="battery-desc" id="battery-desc">
+Stabilne źródło energii do urządzeń o niskim i średnim poborze mocy.
+Seria cynkowa Level 1 — codzienna moc bez przesady.
+</p>
+
+<div class="battery-spec">
+LEVEL 1 / ZINC POWER
+</div>
+
+<div class="battery-pack">
+10 sztuk • AA 1.5V
+</div>
+
+<div class="battery-switch">
+<button class="battery-btn" data-type="basic">Basic</button>
+<button class="battery-btn" data-type="home">Home Premium</button>
+<button class="battery-btn" data-type="industrial">Industrial</button>
+</div>
+<div class="battery-details" id="batteryDetails">
+
+<div class="detail-box">
+<h3>Technologia</h3>
+<p id="batteryTech">
+Technologia cynkowa zapewniająca stabilne napięcie
+dla urządzeń o niskim poborze mocy.
+</p>
+</div>
+
+<div class="detail-box">
+<h3>Zastosowanie</h3>
+<p id="batteryUse">
+Piloty, zegary, zabawki, latarki i małe urządzenia domowe.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="battery-right">
+<img src="bat1.png" id="batteryImage" class="battery-img">
+</div>
+
+</section>
+
+<section class="battery-level-section">
+
+    <h2 class="level-title">Dobierz swój LEVEL</h2>
+
+    <div class="level-grid">
+
+        <div class="level-card level-basic" data-type="basic">
+            <div class="level-number">LEVEL 1</div>
+            <h3>ZINC BASIC</h3>
+            <p>Podstawowa moc do codziennych urządzeń.
+            Stabilne zasilanie bez przesady.</p>
+        </div>
+
+        <div class="level-card level-home" data-type="home">
+            <div class="level-number">LEVEL 2</div>
+            <h3>HOME PREMIUM</h3>
+            <p>Większa wydajność i dłuższa żywotność.
+            Idealne do sprzętu domowego.</p>
+        </div>
+
+        <div class="level-card level-industrial" data-type="industrial">
+            <div class="level-number">LEVEL 3</div>
+            <h3>INDUSTRIAL ULTIMATE</h3>
+            <p>Maksymalna moc litowa.
+            Profesjonalne i ekstremalne zastosowania.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="battery-selector">
+
+  <div class="selector-header">
+    <h2>Nie wiesz który LEVEL wybrać?</h2>
+    <p>Wybierz urządzenie, które chcesz zasilić.</p>
+    <div id="selectorMessage" class="selector-message"></div>
+  </div>
+
+  <div class="selector-grid">
+
+    <!-- BASIC -->
+    <div class="device-card" data-type="basic">
+      <div class="device-icon">🕒</div>
+      <h4>Zegar ścienny</h4>
+      <p>Cichy mechanizm, minimalny pobór energii</p>
+    </div>
+
+    <div class="device-card" data-type="basic">
+      <div class="device-icon">📺</div>
+      <h4>Pilot do telewizora</h4>
+      <p>Sporadyczne użycie, stabilne napięcie</p>
+    </div>
+
+    <div class="device-card" data-type="basic">
+      <div class="device-icon">🔦</div>
+      <h4>Latarka awaryjna</h4>
+      <p>Gotowa do działania, gdy jej potrzebujesz</p>
+    </div>
+
+    <div class="device-card" data-type="basic">
+      <div class="device-icon">🧮</div>
+      <h4>Kalkulator biurowy</h4>
+      <p>Stałe zasilanie przy niskim obciążeniu</p>
+    </div>
+
+    <div class="device-card" data-type="basic">
+      <div class="device-icon">🧸</div>
+      <h4>Prosta zabawka dziecięca</h4>
+      <p>Podstawowa moc do lekkich urządzeń</p>
+    </div>
+
+    <!-- HOME PREMIUM -->
+    <div class="device-card" data-type="home">
+      <div class="device-icon">🎮</div>
+      <h4>Pad do PlayStation / Xbox</h4>
+      <p>Intensywne sesje gamingowe i szybkie zużycie energii</p>
+    </div>
+
+    <div class="device-card" data-type="home">
+      <div class="device-icon">🖱️</div>
+      <h4>Mysz bezprzewodowa</h4>
+      <p>Codzienna praca i precyzyjne działanie</p>
+    </div>
+
+    <div class="device-card" data-type="home">
+      <div class="device-icon">⌨️</div>
+      <h4>Klawiatura bezprzewodowa</h4>
+      <p>Stałe użytkowanie przez wiele godzin</p>
+    </div>
+
+    <div class="device-card" data-type="home">
+      <div class="device-icon">🪥</div>
+      <h4>Szczoteczka elektryczna</h4>
+      <p>Regularne ładowanie i stabilna wydajność</p>
+    </div>
+
+    <div class="device-card" data-type="home">
+      <div class="device-icon">⚖️</div>
+      <h4>Waga łazienkowa / kuchenna</h4>
+      <p>Średni pobór, większa żywotność baterii</p>
+    </div>
+
+    <!-- INDUSTRIAL -->
+    <div class="device-card" data-type="industrial">
+      <div class="device-icon">📷</div>
+      <h4>Profesjonalny aparat fotograficzny</h4>
+      <p>Długie sesje zdjęciowe i wysoki pobór mocy</p>
+    </div>
+
+    <div class="device-card" data-type="industrial">
+      <div class="device-icon">📹</div>
+      <h4>Kamera monitoringu domu</h4>
+      <p>Ciągła praca bez przerw</p>
+    </div>
+
+    <div class="device-card" data-type="industrial">
+      <div class="device-icon">🚨</div>
+      <h4>Czujnik alarmowy / smart home</h4>
+      <p>Stała gotowość systemu zabezpieczeń</p>
+    </div>
+
+    <div class="device-card" data-type="industrial">
+      <div class="device-icon">🏕️</div>
+      <h4>Sprzęt outdoor (GPS, latarka taktyczna)</h4>
+      <p>Ekstremalne warunki użytkowania</p>
+    </div>
+
+    <div class="device-card" data-type="industrial">
+      <div class="device-icon">📏</div>
+      <h4>Urządzenie pomiarowe / techniczne</h4>
+      <p>Wysoka precyzja i stabilność napięcia</p>
+    </div>
+
+  </div>
+
+<div id="recommendationModal" class="recommendation-modal">
+  <div class="recommendation-box">
+    <span class="recommend-label">REKOMENDACJA</span>
+    <h2 id="modalLevel"></h2>
+  </div>
+</div>
+</section>
+
+
+<footer class="footer">
+<p>© 2026 BARTUŚ</p>
+</footer>
+
+<script src="baterie.js"></script>
+
+</body>
+</html>
